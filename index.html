@@ -95,6 +95,47 @@
             font-weight: bold;
             margin-left:6px;
         }
+        /* Highlight effect */
+.highlight {
+  position: relative;
+  z-index: 1;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  height: 30%;
+  background: var(--brand-blue);
+  z-index: -1;
+  opacity: 0.6;
+  border-radius: 4px;
+}
+
+/* Smooth animation */
+.hero h1 {
+  animation: fadeSlide 1s ease;
+}
+
+.hero-sub {
+  font-size: 18px;
+  margin-top: 12px;    */better spacing*/
+   font-weight: 500; 
+  animation: fadeSlide 1.4s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
     </style>
 </head>
 <body>
@@ -123,8 +164,8 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Your Smile, Our Priority</h1>
-            <p>Advanced Dental Care by <strong>Dr. Mukta Shelke</strong></p>
+            <h1><span class='highlight">Expert Dental Care</span></h1>
+            <p> class="hero-sub">By Dr. Mukta Shelke</p>
             <div class="cta-btns">
                 <a href="tel:8275676177" class="btn btn-call"><i class="fas fa-phone-alt"></i> 8275676177</a>
                 <a href="https://wa.me/918275676177" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Booking</a>
