@@ -46,7 +46,11 @@
             justify-content: center;
             color: #ffffff; text-align: center;
         }
-        .hero-content { width: 100%; }
+        .hero-content{ 
+            width: 100%;
+            position:relative;
+            z-index:2;
+        }
         .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 10px; }
         .btn { padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; margin: 10px; transition: var(--transition); border: none; }
         .btn-call { background: var(--white); color: var(--brand-blue); }
@@ -123,7 +127,7 @@
 
 .hero-sub {
   font-size: 18px;
-  margin-top: 12px;    */better spacing*/
+  margin-top: 12px; */better spacing*/
    font-weight: 500; 
   animation: fadeSlide 1.4s ease;
 }
